@@ -1,20 +1,12 @@
-link to GUI challenges:
+# A CMS for Developers (wip)
 
-https://github.com/argyleink/gui-challenges/blob/main/sidenav/postcss.config.js
+A super minimalistic web app written in vanilla js.
 
-https://github.com/argyleink/Google-IO-2021-Workshop_User-Adaptive-Interfaces
+## Prequisites
 
-- next thing need to setup preset-env https://github.com/csstools/postcss-preset-env
+- a site with a content stored in github
+- Personal access tokens has been generated [Guide to create one](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
-# Issue with side nav
+## Install
 
-- I want to have a certain size and 3 dots afterwards.
-
-## Solution
-
-- need to set the width for the container
-- set the follwoings:
-
-text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
-
-<link rel="stylesheet" href="css/index.css">
+- trying to push it to cdn to place in into an empty html.
