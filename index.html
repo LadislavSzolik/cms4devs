@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Mini CMS</title>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+</head>
+
+<body>
+  <aside id="sidenav-open">
+    <nav>
+      <div id="path-loader" class="hidden">
+        <h4 id="git-directory-path"></h4>
+        <button id="load-gitdir-btn" class="primary-btn">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z">
+            </path>
+          </svg>
+        </button>
+      </div>
+      <div id="directory"></div>
+    </nav>
+    <a href="#" id="sidenav-close" title="Close Menu" aria-label="Close Menu"></a>
+  </aside>
+  <main>
+    <header>
+      <a href="#sidenav-open" id="sidenav-button" class="hamburger" title="Open Menu" aria-label="Open Menu">
+        <svg viewBox="0 0 50 40" role="presentation" focusable="false" aria-label="trigram for heaven symbol">
+          <line x1="0" x2="100%" y1="10%" y2="10%" />
+          <line x1="0" x2="100%" y1="50%" y2="50%" />
+          <line x1="0" x2="100%" y1="90%" y2="90%" />
+        </svg>
+      </a>
+      <div class="title-wrapper">
+        <h1 id="main-title"></h1>
+        <input id="newfilename" class="hidden" value="undefined.md" />
+        <button id="edit-btn" class="primary-btn hidden" role="button">Edit</button>
+        <button id="preview-btn" class="primary-btn hidden" role="button">Preview</button>
+      </div>
+      <p id="notification" class="hidden">Notification comes here</p>
+    </header>
+    <section id="login-form">
+      <label>Git owner
+        <input id="git-owner" type="text" placeholder="Git owner" value="LadislavSzolik" />
+      </label>
+
+      <label>Git auth
+        <input id="git-auth" type="text" placeholder="Auth token from github" />
+      </label>
+
+      <label>Git repository
+        <input id="git-repository" type="text" placeholder="Git repository name" value="english-learning-vue-app" />
+      </label>
+
+      <label>Git directory (omit leading dash)
+        <input name="content-path" id="content-path" type="text" value="blog" />
+      </label>
+
+      <button id="sign-in" class="primary-btn" role="button">
+        Sign in to github
+      </button>
+    </section>
+
+    <article id="blog-container" class='hidden'>
+      <textarea id="blog-area"></textarea>
+      <div id="blog-preview" class="hidden"></div>
+      <footer>
+        <input id="git-message" type="text" placeholder="Git commit message" />
+        <button id="publish-btn" class="primary-btn" role="button">
+          Publish
+        </button>
+        <button id="delete-btn" class="primary-btn danger" role="button">
+          Delete
+        </button>
+      </footer>
+    </article>
+
+  </main>
+  <template id="directory-btn">
+    <button class="directory--button">
+      <svg class="button--icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z">
+        </path>
+      </svg>
+      <span>Template button</span>
+    </button>
+  </template>
+
+  <template id="directory-btn-new">
+    <button class="directory--button">
+      <svg class="button--icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+        </path>
+      </svg>
+      <span>Template button</span>
+    </button>
+  </template>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
