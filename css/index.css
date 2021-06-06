@@ -270,6 +270,13 @@ article {
 }
 #blog-area {
   font-family: monospace, 'Courier New', Courier;
+  font-size: 12px;
+  line-height: 1.5;
+
+  @media (max-width: 540px) {
+    font-size: 14px;
+  }
+
   border-radius: 0.5ch;
   border-color: var(--surface4);
   resize: none;
