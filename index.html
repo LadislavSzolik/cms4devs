@@ -21,11 +21,19 @@
             </path>
           </svg>
         </button>
+        <button id="refresh-gitdir-btn" class="primary-btn">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+            </path>
+          </svg>
+        </button>
       </div>
       <div id="directory"></div>
     </nav>
     <a href="#" id="sidenav-close" title="Close Menu" aria-label="Close Menu"></a>
   </aside>
+
   <main>
     <header>
       <a href="#sidenav-open" id="sidenav-button" class="hamburger" title="Open Menu" aria-label="Open Menu">
@@ -53,11 +61,11 @@
       </label>
 
       <label>Git repository
-        <input id="git-repository" type="text" placeholder="Git repository name" value="ladislav-site" />
+        <input id="git-repository" type="text" placeholder="Git repository name" value="english-learning-vue-app" />
       </label>
 
       <label>Git directory (omit leading dash)
-        <input name="content-path" id="content-path" type="text" value="src/blog" />
+        <input name="content-path" id="content-path" type="text" value="blog" />
       </label>
 
       <button id="sign-in" class="primary-btn" role="button">

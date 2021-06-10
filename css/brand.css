@@ -9,9 +9,9 @@
   --space-xl: 3rem;
   --space-xxl: 6rem;
 
-  --hue: 50;
-  --saturation: 100%;
-  --lightness: 50%;
+  --hue: 280;
+  --saturation: 60%;
+  --lightness: 78%;
 
   --brandHSL: var(--hue) calc(var(--saturation) / 2) var(--lightness);
 
@@ -29,9 +29,9 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --brandHSL: var(--hue) var(--saturation) var(--lightness);
+    --brandHSL: var(--hue) var(--saturation) calc(var(--lightness) / 2);
 
-    --errorHSL: 0 75% 60%;
+    --errorHSL: 0 70% 40%;
     --successHSL: 120 55% 40%;
 
     /* very dark brand blue */

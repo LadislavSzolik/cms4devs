@@ -3,6 +3,7 @@
 
 /* layout for the body */
 body {
+  font-size: 14px;
   min-block-size: 100vh;
   font-family: system-ui, sans-serif;
 
@@ -102,7 +103,7 @@ nav {
 
 #path-loader {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr auto auto;
   align-items: center;
   gap: var(--space-xs);
 
@@ -113,13 +114,14 @@ nav {
   }
 }
 
-#load-gitdir-btn {
+#load-gitdir-btn,
+#refresh-gitdir-btn {
   padding-block-start: var(--space-xxs);
   padding-block-end: var(--space-xxs);
 
   & > svg {
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -238,20 +240,20 @@ main {
   & > header {
     margin-block-start: var(--space-xxs);
     margin-block-end: var(--space-sm);
-
-    & > h1 {
-      margin: 0;
-
-      @media (max-width: 540px) {
-        font-size: 1.6rem;
-      }
-    }
   }
 }
 
 .title-wrapper {
   display: grid;
   grid-template-columns: 1fr auto;
+
+  & h1 {
+    @media (max-width: 540px) {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
 }
 
 /*----------------------------------------------*/
@@ -270,13 +272,7 @@ article {
 }
 #blog-area {
   font-family: monospace, 'Courier New', Courier;
-  font-size: 12px;
   line-height: 1.5;
-
-  @media (max-width: 540px) {
-    font-size: 14px;
-  }
-
   border-radius: 0.5ch;
   border-color: var(--surface4);
   resize: none;
@@ -334,7 +330,7 @@ footer {
 
 .error {
   color: hsl(var(--errorHSL));
-  background-color: hsl(var(--errorHSL) / 25%);
+  background-color: hsl(var(--errorHSL) / 10%);
 }
 
 .success {
@@ -348,7 +344,7 @@ footer {
 
 .primary-btn {
   font-weight: 600;
-  background-color: hsl(var(--brandHSL) / 10%);
+  background-color: hsl(var(--brandHSL) / 8%);
   border: none;
   border-radius: 5px;
   padding-inline-start: var(--space-xs);
